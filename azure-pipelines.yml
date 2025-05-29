@@ -10,9 +10,9 @@ pool:
   name: Default
 
 steps:
-  - script: echo Myfirst Azure Pipeline for maven project
+  - script: echo Gradle App
     displayName: 'Run a one-line script'
-  - script: mvn clean install
-    displayName: 'Build with maven'
-  - script: java -jar target/SimpleMavenApp-1.0-SNAPSHOT.jar
-    displayName: 'Running jar'
+  - script: gradle build
+    displayName: 'Build with Gradle'
+  - script: gradle run
+    displayName: 'Running Gradle App'
